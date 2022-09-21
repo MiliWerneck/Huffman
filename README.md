@@ -5,6 +5,7 @@
 ## Introdução Teórica:
 <p align="justify">
 A codificação de Huffman é um método de compactação que usa as probabilidades de ocorrência dos símbolos no conjunto de dados a ser compactado para determinar códigos de tamanho variável para cada símbolo.
+<p align="justify">
 - O algoritmo de Huffman
 <p align="justify">
 - Assuma que cada caracter em um texto está associado a um peso, que é definido pelo número de vezes que o caracter aparece em um arquivo. Na string “bom esse bombom”, os caracteres “b”, “o” e “m” têm peso 3, enquando os caracteres “e”, “s” e espaço têm peso 2. Para usar o
@@ -32,7 +33,7 @@ maneira que a lista seja mantida ordenada.
 <p align="justify">
 Elabore uma árvore binária que utilize o código de Huffman para comprimir arquivos. Para tanto, (1) contabilizar a recorrência de cada palavra(RP) no arquivo; (2) normalizar a contabilização entre 0 e 1 utilizando a fórmula: (RP/(max(RP)-min(RP)); (3) montar a árvore com as regras apresentadas por Huffman; (4) troque as palavras pela codificação binária (utilizar booleano para representar 0 e 1); (5) salve o arquivo em formato binário e observe qual foi o ganho de espaço obtido.
 <p align="justify">
-Elabore um Readme.mb explicando toda lógica utilizada na implementação, bem como, exemplos para representar funcionalidades da applicação. Feito isso, demonstre um desses exemplos em execução para detalhar para o leitos o que ele deve esperar como saída. Além disso, detalhe tudo que for importante no código e mostre como deve ser compilado.
+Elabore um Readme.mb explicando toda lógica utilizada na implementação, bem como, exemplos para representar funcionalidades da aplicação. Feito isso, demonstre um desses exemplos em execução para detalhar para o leitor o que ele deve esperar como saída. Além disso, detalhe tudo que for importante no código e mostre como deve ser compilado.
 	
 ## Funcionamento do código:
 <p align="justify">
