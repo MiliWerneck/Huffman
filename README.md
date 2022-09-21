@@ -7,16 +7,16 @@ O valor de um elemento em um mapa pode ser alterado diretamente. O valor de chav
 <!-- Documentação: Readme.md descrevendo o problema e todas as informações pertinentes a resolutividade do mesmo. Aplique exemplos para explicar o funcionamento de sua solução e estabeleça uma tabela para detalhar o resultado esperado e como deve ser compilada. -->
 
 
-# Treinamento de Estrutura HASH
+# Código de Huffman
 <h2 align="center"> Marinêz Werneck Magalhães </h2>
 <p> <p>
 
 - Descrevendo o problema:
 <p align="justify">
-Neste trabalho, cada aluno deve implementar um sistema de multiplicação de matrizes baseando-se em uma estratégia de segmentação em arquivo. Um arquivo M grande é fornecido no formato NxN com valores de ponto flutuante ou inteiros como entrada. Este é processado a partir de várias coordenadas introduzidas por um segundo arquivo, o coordenadas.txt. Em coordenadas.txt deve ser descrito por linha uma dupla de i e j correspondendo a posição inicial e final a ser lida. Por exemplo, as posições 2,4,6,10 indica que a leitura em M deve iniciar na linha 2 coluna 4 e seguir até a linha 6 coluna 10.
-
-Feito a leitura da composição de M para um tipo matriz em C, a segunda etapa é produzir a transposta de M -= MT. Feito isso, produza a multiplicação e armazene em uma hash o resultado da multiplicação como valor para a dupla de i's e j's, os quais deverão ser utilizados como chaves da hash. Assim, para cada novo calculo, antes o sistema deve consular a hash para identificar se a multiplicação já foi realizada. Em caso afirmativo, retorne apenas a resposta já calculada. Caso contrário, elabore a multiplicação e armazene o conteúdo em cache.
-
+Elabore uma árvore binária que utilize o código de Huffman para comprimir arquivos. Para tanto, (1) contabilizar a recorrência de cada palavra(RP) no arquivo; (2) normalizar a contabilização entre 0 e 1 utilizando a fórmula: (RP/(max(RP)-min(RP)); (3) montar a árvore com as regras apresentadas por Huffman; (4) troque as palavras pela codificação binária (utilizar booleano para representar 0 e 1); (5) salve o arquivo em formato binário e observe qual foi o ganho de espaço obtido.
+<p align="justify">
+Elabore um Readme.mb explicando toda lógica utilizada na implementação, bem como, exemplos para representar funcionalidades da applicação. Feito isso, demonstre um desses exemplos em execução para detalhar para o leitos o que ele deve esperar como saída. Além disso, detalhe tudo que for importante no código e mostre como deve ser compilado.
+	
 - Funcionamento do código:
 <p align="justify">
 Para se trabalhar com grande volume de dados sendo processado, com a Hash, podemos economizar processamento de informações repetidas? Sim, para provar essa teoria utilizou-se o seguinte método:
