@@ -15,18 +15,21 @@ algoritmo de Huffman, é necessário calcular esses pesos (ver Dica 1). O algori
   
 ### Algoritmo:
   
+ <p align="justify">
 1. Comece com uma lista de árvores. Inicialmente, todas as árvores são compostas de um nó
 apenas, com o peso da árvore igual ao peso do caracter do nó. Caracteres que ocorrerem
 mais frequentemente têm o maior peso. Caracteres que ocorrerem menos frequentemente
 têm o menor peso. Ordene a lista de árvores de forma crescente, fazendo com que o nó
 raiz da primeira árvore seja o caracter de menor peso e o nó raiz da última árvore seja o
 caracter de maior peso.
+ <p align="justify">
 2. Repita os passos a seguir até que sobre apenas uma única árvore:
 o Pegue as duas primeiras árvores da lista e as chame de T1 e T2. Crie uma nova
 árvore Tr cuja raiz tenha o peso igual à soma dos pesos de T1 e T2 e cuja
 subárvore esquerda seja T1 e subárvore direita seja T2.
 o Exclua T1 e T2 da lista (mantendo T1 e T2 na memória) e inclua Tr na lista,de
 maneira que a lista seja mantida ordenada.
+ <p align="justify">
 3. A árvore final será a árvore ótima de codificação
 
 <p align="justify">
