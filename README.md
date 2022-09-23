@@ -5,13 +5,16 @@
 ## Introdução Teórica:
 <p align="justify">
 A codificação de Huffman é um método de compactação que usa as probabilidades de ocorrência dos símbolos no conjunto de dados a ser compactado para determinar códigos de tamanho variável para cada símbolo.
-<p align="justify">
-- O algoritmo de Huffman
+  
+### O algoritmo de Huffman
+  
 <p align="justify">
 - Assuma que cada caracter em um texto está associado a um peso, que é definido pelo número de vezes que o caracter aparece em um arquivo. Na string “bom esse bombom”, os caracteres “b”, “o” e “m” têm peso 3, enquando os caracteres “e”, “s” e espaço têm peso 2. Para usar o
 algoritmo de Huffman, é necessário calcular esses pesos (ver Dica 1). O algoritmo de Huffman assume que uma árvore será construída a partir de um grupo de
 árvores. Inicialmente essas árvores têm um único nó com um caracter e o peso deste caracter. À cada iteração do algoritmo, duas árvores são juntadas criando uma nova árvore. Isso faz com que o número de árvores diminua a cada passo.
-## Algoritmo:
+  
+### Algoritmo:
+  
 1. Comece com uma lista de árvores. Inicialmente, todas as árvores são compostas de um nó
 apenas, com o peso da árvore igual ao peso do caracter do nó. Caracteres que ocorrerem
 mais frequentemente têm o maior peso. Caracteres que ocorrerem menos frequentemente
@@ -31,7 +34,7 @@ maneira que a lista seja mantida ordenada.
 
 ## Descrevendo o problema:
 <p align="justify">
-Elabore uma árvore binária que utilize o código de Huffman para comprimir arquivos. Para tanto, (1) contabilizar a recorrência de cada palavra(RP) no arquivo; (2) normalizar a contabilização entre 0 e 1 utilizando a fórmula: (RP/(max(RP)-min(RP)); (3) montar a árvore com as regras apresentadas por Huffman; (4) troque as palavras pela codificação binária (utilizar booleano para representar 0 e 1); (5) salve o arquivo em formato binário e observe qual foi o ganho de espaço obtido.
+Elabore uma árvore binária que utilize o código de Huffman para comprimir arquivos. Para tanto, (1) contabilizar a recorrência de cada palavra(RP) no arquivo; (2) normalizar a contabilização entre 0 e 1 utilizando a fórmula: (RP/(quantidade de palavras)); (3) montar a árvore com as regras apresentadas por Huffman; (4) troque as palavras pela codificação binária (utilizar booleano para representar 0 e 1); (5) salve o arquivo em formato binário e observe qual foi o ganho de espaço obtido.
 <p align="justify">
 Elabore um Readme.mb explicando toda lógica utilizada na implementação, bem como, exemplos para representar funcionalidades da aplicação. Feito isso, demonstre um desses exemplos em execução para detalhar para o leitor o que ele deve esperar como saída. Além disso, detalhe tudo que for importante no código e mostre como deve ser compilado.
 
@@ -74,10 +77,7 @@ Os códigos foram criados com base no Código de Árvore fornecido pelo professo
 ## Resultados e Conclusão:
 
 <p align="justify">
-Para a entrada abaixo, utilizada como modelo obteve-se um pequeno ganho na compactação do arquivo ".txt" após a aplicação da implementação de Huffman
-<p align="left">
-  <img src="src/images/1.png" height = "150"></img>
-</p>
+Para a entrada utilizada como modelo obteve-se um pequeno ganho na compactação do arquivo ".txt" após a aplicação da implementação de Huffman
 <p align="justify">
 Após a execução do código o resultado foi impresso em "saida.txt", no formato binário
 <p align="left">
@@ -91,7 +91,7 @@ O pequeno ganho na compactação do arquivo ".txt" após a aplicação da implem
 <p align="justify">
 O terminal após execução do Código apresenta a Entrada novamente ordenada.
 <p align="left">
-  <img src="src/images/4.png" height = "150"></img>
+  <img src="src/images/4.png" height = "100"></img>
 </p>
 
 
@@ -103,7 +103,7 @@ O terminal após execução do Código apresenta a Entrada novamente ordenada.
 | Comando | Função |
 |---------| --------|
 | `make clean` | Apaga a última compilação realizada contida na pasta build |
-| `make` | Executa a compilação do programa utilizando o gcc, e o resultado vai para a pasta build |
+| `make` | Executa a compilação do programa utilizando o g++, e o resultado vai para a pasta build |
 | `make run` | Executa o programa da pasta build após a realização da compilação |
 
 
