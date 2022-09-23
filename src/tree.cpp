@@ -109,14 +109,6 @@ void operHuffman(vector <Tree *> *f_init, vector <Tree *> *f_reduz, Tree *raiz) 
 
 }
 
-void preordem(Tree *t) {
-	if (!(t == NULL)) {
-		// printf("%d ", t->reg.key);
-		preordem(t->esq);
-		preordem(t->dir);
-	}
-}
-
 void codifica(Tree *t, map<string, string> *mapa, string s, string aux) {
 	if (!(t == NULL)) {
 		aux.append(s);

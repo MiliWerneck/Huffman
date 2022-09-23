@@ -33,7 +33,7 @@ int main() {
 	codifica(raiz_final, &mapa, "", "");
 	map<string, string>::iterator it;
 	for (it = mapa.begin(); it != mapa.end(); ++it) {
-		cout << it->first << " " << it->second << endl;
+		// cout << it->first << " " << it->second << endl;
 	}
 	Read rt;
 
@@ -57,8 +57,4 @@ void contaFreq(map <string, float> *frequencia, vector<string> *str) {
 
 	for (itr = frequencia->begin(); itr != frequencia->end();++itr)
 		itr->second = itr->second / quant;
-
-	// for (itr = frequencia->begin(); itr != frequencia->end();++itr)
-	// 	cout << itr->first << " " << itr->second << endl;
-
 }
