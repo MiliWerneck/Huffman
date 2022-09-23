@@ -1,10 +1,12 @@
 #ifndef TREE_HPP
 #define TREE_HPP
 
-#include<stdio.h>
-#include<stdlib.h>
-#include<stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
 #include <iostream>
+#include <fstream>
 #include <map>
 #include <vector>
 #include <algorithm>
@@ -15,7 +17,8 @@ typedef struct Record Record;
 typedef struct Tree Tree;
 
 struct Record {
-	string key;
+	// string *key;
+	char *key;
 	float value;
 	vector<int> v;
 };
@@ -33,9 +36,10 @@ void get_first_sec(vector <Tree *> f_init, Tree **first, Tree **second);
 void insertTreeHuff(vector <Tree *> *f_init, Tree **raiz_final);
 
 void reduzirFloresta(Tree **t, Record r, vector <Tree *> *f_init, Tree **t_menor, Tree **t_maior, Tree **raiz_final);
+void decodeBinary(Tree *raiz_final);
 
 void preordem(Tree *t);
 void central(Tree *t);
-void posordem(Tree *t, map<string, string> *mapa, string s, string aux);
+void codifica(Tree *t, map<string, string> *mapa, string s, string aux);
 
 #endif

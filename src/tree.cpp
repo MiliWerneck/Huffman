@@ -14,8 +14,36 @@ void insertTree(Tree **t, Record r) {
 		*t = (Tree *)malloc(sizeof(Tree));
 		(*t)->esq = NULL;
 		(*t)->dir = NULL;
-		(*t)->reg = r;
+		(*t)->reg.key = (char *)malloc(sizeof(char) * 20);
+		strcpy((*t)->reg.key, r.key);
+		(*t)->reg.value = r.value;
 	}
+}
+
+void decodeBinary(Tree *raiz_final) {
+	ifstream myfile("src/files/saida.txt");
+	char c;
+	Tree *aux;
+
+	aux = CreateTree();
+
+	if (myfile.is_open()) {
+		aux = raiz_final;
+
+		while (myfile.get(c)) {
+			if (!(aux == NULL)) {
+				aux = (c == '0') ? aux->esq : aux->dir;
+				if (!(strcmp(aux->reg.key, "#") == 0)) {
+					cout << aux->reg.key << " ";
+					aux = raiz_final;
+				}
+			}
+		}
+		cout << endl;
+		myfile.close();
+	} else
+		cout << "Não foi possível abrir arquivo" << endl;
+
 }
 
 void insertTreeHuff(vector <Tree *> *f_init, Tree **raiz_final) {
@@ -38,6 +66,8 @@ void insertTreeHuff(vector <Tree *> *f_init, Tree **raiz_final) {
 		t = (Tree *)malloc(sizeof(Tree));
 		t->esq = t_maior;
 		t->dir = t_menor;
+		(t)->reg.key = (char *)malloc(sizeof(char) * 20);
+		strcpy((t)->reg.key, "#");
 		t->reg.value = (t_menor->reg.value + t_maior->reg.value);
 	}
 	operHuffman(f_init, &f_reduz, t);
@@ -87,22 +117,15 @@ void preordem(Tree *t) {
 	}
 }
 
-void central(Tree *t) {
-	if (!(t == NULL)) {
-		central(t->esq);
-		if (t->reg.key.empty())
-			cout << "#";
-		cout << t->reg.key << "-" << t->reg.value << " ";
-		central(t->dir);
-	}
-}
-
-void posordem(Tree *t, map<string, string> *mapa, string s, string aux) {
+void codifica(Tree *t, map<string, string> *mapa, string s, string aux) {
 	if (!(t == NULL)) {
 		aux.append(s);
-		posordem(t->esq, mapa, "0", aux);
-		posordem(t->dir, mapa, "1", aux);
-		if (!t->reg.key.empty())
-			mapa->insert({ t->reg.key, aux });
+		codifica(t->esq, mapa, "0", aux);
+		codifica(t->dir, mapa, "1", aux);
+		if (strcmp(t->reg.key, "#") != 0) {
+			string str;
+			str.assign(t->reg.key);
+			mapa->insert({ str, aux });
+		}
 	}
 }
