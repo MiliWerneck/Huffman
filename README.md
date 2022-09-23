@@ -97,7 +97,7 @@ O terminal após execução do Código apresenta a Entrada novamente ordenada.
   <img src="src/images/4.png" height = "100"></img>
 </p>
 <p align="justify">
-O código de Huffman requer ordenação, o algoritmo apresentado faz ordenação. No algoritimo, quando é feita inserção na arvore da esquerda e direita, não ordena o vetor inicial, isso talvez gere arquivo maiores. O que não aconteceu no arquivo de teste.
+O código de Huffman requer ordenação, o algoritmo apresentado faz ordenação, quando é feita inserção na arvore da esquerda e direita, não ordena o vetor inicial, isso talvez gere arquivo maiores. O que não aconteceu no arquivo de teste.
 
 
 
