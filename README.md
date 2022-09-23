@@ -1,5 +1,3 @@
-// http://www.inf.ufes.br/~pdcosta/ensino/2019-2-estruturas-de-dados/
-
 # Código de Huffman
 <h2 align="center"> Marinêz Werneck Magalhães </h2>
 <p> <p>
