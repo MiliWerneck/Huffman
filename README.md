@@ -40,15 +40,18 @@ Elabore um Readme.mb explicando toda lógica utilizada na implementação, bem c
 
 Os códigos foram criados com base no Código de Árvore fornecido pelo professor Michel em seu Git.
 
--> Arquivo "util.hpp"
+### Arquivo "util.hpp"
 - Faz a Tokenização - retorna um vetor de string;
 
--> Arquivo "read.hpp"
+### Arquivo "read.hpp"
 - Faz a leitura da entrada "huff.txt" e apresenta a saída convetida em formato binário "saida.txt";
 
--> Arquivo "tree.cpp"
-(Tree *CreateTree() ) - Cria a árvore;
-(bool TVazia(Tree **t))
+### Arquivo "tree.cpp"
+-> (Tree *CreateTree() ) 
+- Cria a árvore;
+
+-> (bool TVazia(Tree **t))
+
 - Verifica se está vazia;
 
 -> (insertTree)
