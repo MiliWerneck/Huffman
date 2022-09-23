@@ -10,7 +10,7 @@ A codificação de Huffman é um método de compactação que usa as probabilida
   
 <p align="justify">
 - Assuma que cada caracter em um texto está associado a um peso, que é definido pelo número de vezes que o caracter aparece em um arquivo. Na string “bom esse bombom”, os caracteres “b”, “o” e “m” têm peso 3, enquando os caracteres “e”, “s” e espaço têm peso 2. Para usar o
-algoritmo de Huffman, é necessário calcular esses pesos (ver Dica 1). O algoritmo de Huffman assume que uma árvore será construída a partir de um grupo de
+algoritmo de Huffman, é necessário calcular esses pesos. O algoritmo de Huffman assume que uma árvore será construída a partir de um grupo de
 árvores. Inicialmente essas árvores têm um único nó com um caracter e o peso deste caracter. À cada iteração do algoritmo, duas árvores são juntadas criando uma nova árvore. Isso faz com que o número de árvores diminua a cada passo.
   
 ### Algoritmo:
@@ -24,10 +24,10 @@ raiz da primeira árvore seja o caracter de menor peso e o nó raiz da última �
 caracter de maior peso.
  <p align="justify">
 2. Repita os passos a seguir até que sobre apenas uma única árvore:
-o Pegue as duas primeiras árvores da lista e as chame de T1 e T2. Crie uma nova
+Pegue as duas primeiras árvores da lista e as chame de T1 e T2. Crie uma nova
 árvore Tr cuja raiz tenha o peso igual à soma dos pesos de T1 e T2 e cuja
 subárvore esquerda seja T1 e subárvore direita seja T2.
-o Exclua T1 e T2 da lista (mantendo T1 e T2 na memória) e inclua Tr na lista,de
+Exclua T1 e T2 da lista (mantendo T1 e T2 na memória) e inclua Tr na lista,de
 maneira que a lista seja mantida ordenada.
  <p align="justify">
 3. A árvore final será a árvore ótima de codificação
@@ -96,6 +96,8 @@ O terminal após execução do Código apresenta a Entrada novamente ordenada.
 <p align="left">
   <img src="src/images/4.png" height = "100"></img>
 </p>
+<p align="justify">
+O código de Huffman requer ordenação. No algoritimo apresentado, quando é feita inserção na arvore da esquerda e direita, não ordena o vetor inicial, aisso talvez gere arquivo maiores. O que não aconteceu no arquivo de teste.
 
 
 
